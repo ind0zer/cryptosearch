@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Crypto Search</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <h2>Crypto<br />Search</h2>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Главная</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Частые вопросы</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Функциональность</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Отзывы</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Заключение</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+        <h2 class="hero__title">Crypto<br /><span>Search</span></h2>
+        <h1 class="hero__descr">
+          Crypto Search - Мы амбициозная команда WEB3 поколения.<br />В состав
+          нашей команды входят професиональные IT-специалисты, Трейдеры со
+          стажем и иные энтузиасты 21-го века.<br />Мы хотим развивать WEB 3
+          поколение и делать его апект шире
+        </h1>
+        <button class="hero__btn"><a href="#">Начать искать</a></button>
+    </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+        <h2 class="questions__title">Частые вопросы пользователей</h2>
+        <ul class="questions__list">
+          <li class="questions__item">
+            <input
+              class="questions__input"
+              type="checkbox"
+              name="questions__input-name"
+              id="cb1"
+            />
+            <label class="questions__label" for="cb1">
+              <svg class="questions__icon">
+                <use href="./images/symbol-defs.svg#icon-question"></use>
+              </svg>
+              <p class="questions__text">
+                Почему вы не можете найти кошелек сами и вывести его себе?
+              </p>
+            </label>
+            <div class="questions__paragraph">
+              <p class="questions__subtext">
+                Наши специалисты также занимаются поиском утерянных BTC
+                кошельков, дополнительной нашей выгодой является комиссия с
+                выводов пользователей.
+              </p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <input
+              class="questions__input"
+              type="checkbox"
+              name="questions__input-name"
+              id="cb2"
+            />
+            <label class="questions__label" for="cb2">
+              <svg class="questions__icon">
+                <use href="./images/symbol-defs.svg#icon-question"></use>
+              </svg>
+              <p class="questions__text">Сколько длится поиск кошелька?</p>
+            </label>
+            <div class="questions__paragraph">
+              <p class="questions__subtext">
+                Как правило скрипт выдает кошелек за 60 минут беспрерывного
+                поиска. Вам может выпасть как и кошелек с балансом 0.000001 BTC,
+                так и 0.005 BTC.
+              </p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <input
+              class="questions__input"
+              type="checkbox"
+              name="questions__input-name"
+              id="cb3"
+            />
+            <label class="questions__label" for="cb3">
+              <svg class="questions__icon">
+                <use href="./images/symbol-defs.svg#icon-question"></use>
+              </svg>
+              <p class="questions__text">Легально ли это?</p>
+            </label>
+            <div class="questions__paragraph">
+              <p class="questions__subtext">
+                Да, поиск заброшенных кошельков является абсолютно легальным
+                действием.
+              </p>
+            </div>
+          </li>
+        </ul>
+    </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!--
+
+☑️ Как это работает?
+
+На 2023 год по данным crypto.ru на блокчейне находится около 350 тысяч утерянных кошельков BTC с балансом.
+
+Бот имеет 2 варианта работы с утерянными кошельками:
+
+BruteX — Брут способен выполнять несколько задач одновременно, перебирая варианты из любого стороннего словаря
+
+Ncrack — Отличается модульным подходом, поэтому приложение используют для выполнения разных задач, включая подбор мнемонических фраз
+
+📖 Детальная работа бота:
+┠ Скрипт подбирает рандомный ключ ECDSA.
+┠ Хеширует SHA-256 на основе полученного на первом этапе кода. Затем обрабатывают комбинацию с помощью функции RIPEMD-160. Это нужно для получения основной части Bitcoin-адреса.
+┠ Добавляют сетевой байт блока в виде префикса.
+┠ Повторно хешируют на SHA-256.
+┠ Преобразуют полученную строку в Base58.
+┠ Сравнивают результат.
+┠ Составляют мнемоническую фразу, если строки совпали.
+┖ Финальный этап — кошелек у нас на балансе. -->
