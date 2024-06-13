@@ -1,0 +1,291 @@
+html {
+  background-image: url(./img/5588665.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    overflow-x: hidden;
+  }
+  @media screen and (min-width: 410px) {
+    width: 410px;
+  }
+  @media screen and (min-width: 1290px) {
+    width: 1290px;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-x: visible;
+  }
+}
+
+.header {
+  padding: 20px;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+.header__list {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+}
+
+.header__title {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 24px;
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+.header__link {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+.header__title:hover {
+  color: rgb(137, 137, 255);
+}
+.header__link:hover {
+  color: rgb(137, 137, 255);
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero {
+  padding: 300px;
+}
+
+.hero__title {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 52px;
+  color: rgb(56, 106, 255);
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero__title > span {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 42px;
+  color: rgb(92, 92, 92);
+  transition: color 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.hero__descr {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: black;
+  font-size: 24px;
+  transition: color 0.2s ease-in-out;
+}
+
+.hero__btn {
+  background: #5e5df0;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 18px 56px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin-top: 50px;
+}
+
+.hero__btn > a {
+  color: white;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: white;
+  font-size: 20px;
+}
+
+.questions {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.questions__title {
+  text-align: center;
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 22px;
+  color: rgb(33, 45, 83);
+  text-transform: uppercase;
+}
+
+.questions__input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.questions__label {
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+.questions__label::after {
+    content: '';
+    background-image: url(../images/card-catalog/phone/arrow-bottom@1X.webp);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-color: #FFF;
+    width: 34px;
+    height: 34px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .questions__label::after {
+        background-image: url(../images/card-catalog/phone/arrow-bottom@2X.webp);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .questions__label::after {
+        background-image: url(../images/card-catalog/arrow-bottom@1X.webp);
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .questions__label::after {
+            background-image: url(../images/card-catalog/arrow-bottom@2X.webp);
+        }
+    }
+}
+
+.questions__icon {
+    fill: #FFBC57;
+    width: 40px;
+    height: 40px;
+}
+
+.questions__text {
+    margin-left: 15px;
+    max-width: 236px;
+    color: #2B2929; 
+    font-family: "Proxima Nova";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+@media screen and (min-width: 480px) {
+    .questions__text {
+        max-width: 286px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .questions__text {
+        max-width: 946px;
+    }
+}
+
+.questions__subtext {
+    color: #2B2929;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 380px;
+}
+
+@media screen and (min-width: 1200px) {
+    .questions__subtext {
+        max-width: 1040px;
+    }
+}
+
+.questions__paragraph {
+    max-width: 1040px;
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.questions__item .questions__input:checked ~ .questions__paragraph {
+    max-height: 550px;
+}
+
+@media screen and (min-width: 1200px) {
+    .questions__item .questions__input:checked ~ .questions__paragraph {
+        max-height: 230px;
+    }
+}
+
+.questions__input:checked + .questions__label::after {
+    background-image: url(../images/card-catalog/phone/arrow-top@1X.webp);
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .questions__input:checked + .questions__label::after {
+        background-image: url(../images/card-catalog/phone/arrow-top@2X.webp);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .questions__input:checked + .questions__label::after {
+        background-image: url(../images/card-catalog/arrow-top@1X.webp);
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .questions__input:checked + .questions__label::after {
+            background-image: url(../images/card-catalog/arrow-top@2X.webp);
+        }
+    }
+}

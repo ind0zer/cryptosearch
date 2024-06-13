@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./main.css" />
     <title>Crypto Search</title>
   </head>
   <body>
     <header class="header">
+      <div class="container">
       <nav class="header__nav">
-        <h2>Crypto<br />Search</h2>
+        <a href="#" class="header__title">Crypto<br />Search</a>
         <ul class="header__list">
           <li class="header__item">
             <a href="#" class="header__link">Главная</a>
@@ -29,11 +36,12 @@
           </li>
         </ul>
       </nav>
+    </div>
     </header>
     <main>
       <section class="hero">
-        <div class="container">
-          <h2 class="hero__title">Crypto<br /><span>Search</span></h2>
+        <div class="container hero__container">
+          <h2 class="hero__title">Crypto<br/><span>Search</span></h2>
           <h1 class="hero__descr">
             Crypto Search - Мы амбициозная команда WEB3 поколения.<br />В состав
             нашей команды входят професиональные IT-специалисты, Трейдеры со
@@ -267,9 +275,20 @@
           </ul>
         </div>
       </section>
-      <footer class="footer">
-        <a class="footer__link" href="#">Telegram канал</a>
-      </footer>
     </main>
+      <footer class="footer">
+        <div class="container">
+        <div class="footer__box">
+          <a class="footer__link" href="#">Telegram канал</a>
+          <a class="footer__link" href="#">Отзывы</a>
+          <a class="footer__link" href="#">Политика Конфиденциальности</a>
+          <a class="footer__link" href="#">Контакты</a>
+        </div>
+        <img src="#" alt="Crypto Search" />
+        <p>© Все права защищены.</p>
+      </div>
+      </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
