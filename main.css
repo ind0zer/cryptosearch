@@ -2,6 +2,7 @@ html {
   background-image: url(./img/5588665.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .container {
@@ -158,8 +159,8 @@ html {
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
-  font-size: 22px;
-  color: rgb(33, 45, 83);
+  font-size: 26px;
+  color: rgb(7, 9, 17);
   text-transform: uppercase;
 }
 
@@ -173,6 +174,21 @@ html {
     display: flex;
     align-items: center;
     position: relative; 
+}
+
+.questions__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.questions__item {
+    border-radius: 10px;
+    padding: 5px;
+    padding-top: 12px;
+    background-color: rgba(255, 255, 255, 0.772);
+    border: solid 2px rgb(155, 157, 202);
 }
 
 .questions__label::after {
@@ -213,14 +229,15 @@ html {
 }
 
 .questions__text {
-    margin-left: 15px;
     max-width: 236px;
     color: #2B2929; 
-    font-family: "Proxima Nova";
-    font-size: 19px;
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
+    font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+    color: black;
+    font-size: 18px;
 }
 
 @media screen and (min-width: 480px) {
@@ -237,12 +254,15 @@ html {
 
 .questions__subtext {
     color: #2B2929;
-    font-family: "Proxima Nova";
-    font-size: 16px;
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    max-width: 380px;
+    font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+    color: black;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-bottom: 15px;
 }
 
 @media screen and (min-width: 1200px) {
