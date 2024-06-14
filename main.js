@@ -31,3 +31,30 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    let reviews = document.querySelectorAll('.reviews__item');
+    let currentReview = 0;
+
+    function showReview(index) {
+        // Сначала скрываем текущий отзыв
+        reviews[currentReview].classList.remove('active');
+
+        // Устанавливаем задержку перед показом нового отзыва
+        setTimeout(function() {
+            reviews[index].classList.add('active');
+            currentReview = index;
+        }, 500); // Должна совпадать с transition duration в CSS
+    }
+
+    function nextReview() {
+        let nextIndex = (currentReview + 1) % reviews.length;
+        showReview(nextIndex);
+    }
+
+    // Изначально показываем первый отзыв
+    reviews[currentReview].classList.add('active');
+
+    // Устанавливаем интервал для смены отзывов
+    setInterval(nextReview, 5000);
+});

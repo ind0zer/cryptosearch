@@ -48,7 +48,11 @@
             стажем и иные энтузиасты 21-го века.<br />Мы хотим развивать WEB 3
             поколение и делать его апект шире
           </h1>
-          <button class="hero__btn"><a target="_blank" href="https://t.me/cryptosearching_bot">Начать искать</a></button>
+          <button class="hero__btn">
+            <a target="_blank" href="https://t.me/cryptosearching_bot"
+              >Начать искать</a
+            >
+          </button>
         </div>
       </section>
       <section class="questions" id="faq">
@@ -125,24 +129,25 @@
 
       <section class="howworks" id="how-it-works">
         <div class="container">
-          <h3 class="howworks_title">Как это работает?</h3>
+          <h3 class="howworks__title">Как это работает?</h3>
           <ul class="howworks__list">
-            <li class="howworks_item">
+            <li class="howworks__item">
               <h3 class="howworks__text">
-                На 2024 год по данным crypto.ru на блокчейне находится около 350
-                тысяч утерянных кошельков BTC с балансом.<br />
+                <span class="howworks__span">
+                  На 2024 год по данным crypto.ru на блокчейне находится около
+                  350 тысяч утерянных кошельков BTC с балансом.<br />
 
-                Бот имеет 2 варианта работы с утерянными кошельками:<br />
+                  Бот имеет 2 варианта работы с утерянными кошельками:<br />
 
-                BruteX — Брут способен выполнять несколько задач одновременно,
-                перебирая варианты из любого стороннего словаря<br />
+                  BruteX — Брут способен выполнять несколько задач одновременно,
+                  перебирая варианты из любого стороннего словаря.<br />
 
-                Ncrack — Отличается модульным подходом, поэтому приложение
-                используют для выполнения разных задач, включая подбор
-                мнемонических фраз<br /><br />
-
+                  Ncrack — Отличается модульным подходом, поэтому приложение
+                  используют для выполнения разных задач, включая подбор
+                  мнемонических фраз.<br /><br />
+                </span>
                 Детальная работа бота:<br />
-                ┠ Скрипт подбирает рандомный ключ ECDSA.<br />
+                ┏ Скрипт подбирает рандомный ключ ECDSA.<br />
                 ┠ Хеширует SHA-256 на основе полученного на первом этапе кода.
                 Затем обрабатывают комбинацию с помощью функции RIPEMD-160. Это
                 нужно для получения основной части Bitcoin-адреса.<br />
@@ -154,18 +159,22 @@
                 ┖ Финальный этап — кошелек у нас на балансе.
               </h3>
             </li>
-            <li class="howworks_item">
-              <video src="" class="howworks_video"></video>
+            <li class="howworks__item">
+              <video
+                autoplay="autoplay"
+                loop="loop"
+                src="./img/tutor.mp4"
+                class="howworks__video"
+              ></video>
             </li>
           </ul>
         </div>
       </section>
       <section class="reviews" id="reviews">
         <div class="container">
-          <h3>Топ Отзывы</h3>
+          <h3 class="reviews__title">Топ Отзывы</h3>
           <div class="reviews__container">
-            <ul class="reviews__list">
-              <li class="reviews__item">
+              <div class="reviews__item">
                 <h4>Сергей, 34</h4>
                 <p>
                   Скептически относился к подобным сервисам, но решил
@@ -173,30 +182,31 @@
                   приятно что такие сервисы ещё существуют. Всё работает быстро,
                   и, что самое важное, без обмана.
                 </p>
-              </li>
-              <li class="reviews__item">
+              </div>
+              <div class="reviews__item">
                 <h4>Алина, 19</h4>
                 <p>
                   Не ожидала, что сервис и вправду работает, но была впечатлёна
                   скоростью работы тех. поддержки. Очень быстро пополнили и
                   вывели!
                 </p>
-              </li>
-              <li class="reviews__item">
+              </div>
+              <div class="reviews__item">
                 <h4>Артём, 23</h4>
                 <p>
                   Сначала думал, что это очередной развод, но решил дать шанс
                   этому боту. И не зря. Искал забытые кошельки несколько дней и
                   вывел. Сервис надежный и быстрый. Определенно стоит внимания!
                 </p>
-              </li>
-            </ul>
+              </div>
             <div class="reviews__box-form">
               <form class="reviews__form">
                 <h3>Оставить Отзыв</h3>
-                <input class="reviews__name" type="text" placeholder="Имя" />
-                <input class="reviews__age" type="text" placeholder="Возраст" />
-                <input class="reviews__text" type="text" placeholder="Отзыв" />
+                <div class="webflow-style-input">
+                <input class="reviews__name reviews__input" type="text" placeholder="Имя" />
+              </div>
+                <input class="reviews__age reviews__input" type="text" placeholder="Возраст" />
+                <input class="reviews__text reviews__input" type="text" placeholder="Отзыв" />
                 <button class="reviews__button">Отправить</button>
               </form>
             </div>
