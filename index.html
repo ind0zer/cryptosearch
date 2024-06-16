@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Unbounded:wght@200..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./main.css" />
     <title>Crypto Search</title>
@@ -17,10 +18,10 @@
     <header class="header">
       <div class="container">
         <nav class="header__nav">
-          <a href="#" class="header__title">Crypto<br />Search</a>
+          <a href="index.html" class="header__title">Crypto<br /><span>Search</span></a>
           <ul class="header__list">
             <li class="header__item">
-              <a href="#main" class="header__link">Главная</a>
+              <a href="index.html" class="header__link">Главная</a>
             </li>
             <li class="header__item">
               <a href="#faq" class="header__link">Частые вопросы</a>
@@ -34,6 +35,13 @@
             <li class="header__item">
               <a href="#why-us" class="header__link">Почему именно мы?</a>
             </li>
+            <li class="header__item">
+              <button class="header__btn">
+                <a target="_blank" href="https://t.me/cryptosearching_official"
+                  >Новостной канал</a
+                >
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -41,25 +49,25 @@
     <main>
       <section class="hero" id="main">
         <div class="container hero__container">
-          <h2 class="hero__title">Crypto<br /><span>Search</span></h2>
-          <h1 class="hero__descr">
-            Crypto Search - Мы амбициозная команда WEB3 поколения.<br />В состав
-            нашей команды входят професиональные IT-специалисты, Трейдеры со
-            стажем и иные энтузиасты 21-го века.<br />Мы хотим развивать WEB 3
-            поколение и делать его апект шире
+          <h2 data-aos-duration="1500" data-aos="zoom-out" class="hero__title">Crypto<br /><span>Search</span></h2>
+          <h1 data-aos-duration="1500" data-aos="zoom-out" class="hero__descr">
+            Crypto Search - Мы амбициозная команда WEB3 поколения.<br />В нашу
+            команду входят професиональные IT-специалисты, Трейдеры со стажем и
+            иные энтузиасты 21-го века.<br />Мы хотим развивать WEB 3 поколение
+            и делать его аспект шире
           </h1>
-          <button class="hero__btn">
+          <button data-aos-duration="1500" data-aos="zoom-in" class="hero__btn">
             <a target="_blank" href="https://t.me/cryptosearching_bot"
-              >Начать искать</a
+              >Начать поиск</a
             >
           </button>
         </div>
       </section>
       <section class="questions" id="faq">
         <div class="container">
-          <h2 class="questions__title">Частые вопросы пользователей</h2>
+          <h2 data-aos-duration="1000" data-aos="fade-down" class="questions__title">Частые вопросы пользователей</h2>
           <ul class="questions__list">
-            <li class="questions__item">
+            <li data-aos-duration="2000" data-aos="fade-right" class="questions__item">
               <input
                 class="questions__input"
                 type="checkbox"
@@ -82,7 +90,7 @@
                 </p>
               </div>
             </li>
-            <li class="questions__item">
+            <li data-aos-duration="2000" data-aos="fade-left" class="questions__item">
               <input
                 class="questions__input"
                 type="checkbox"
@@ -103,7 +111,7 @@
                 </p>
               </div>
             </li>
-            <li class="questions__item">
+            <li data-aos-duration="2000" data-aos="fade-right" class="questions__item">
               <input
                 class="questions__input"
                 type="checkbox"
@@ -129,12 +137,12 @@
 
       <section class="howworks" id="how-it-works">
         <div class="container">
-          <h3 class="howworks__title">Как это работает?</h3>
-          <ul class="howworks__list">
-            <li class="howworks__item">
-              <h3 class="howworks__text">
-                <span class="howworks__span">
-                  На 2024 год по данным crypto.ru на блокчейне находится около
+          <h3 data-aos-duration="1000" data-aos="fade-down" class="howworks__title">Как это работает?</h3>
+          <div class="howworks__content">
+            <ul class="howworks__list">
+              <li data-aos-duration="2000" data-aos="fade-right" class="howworks__item">
+                <h3 class="howworks__text">
+                  На 2024 год по данным <a target="_blank" href="https://crypto.ru">crypto.ru</a> на блокчейне находится около
                   350 тысяч утерянных кошельков BTC с балансом.<br />
 
                   Бот имеет 2 варианта работы с утерянными кошельками:<br />
@@ -145,21 +153,28 @@
                   Ncrack — Отличается модульным подходом, поэтому приложение
                   используют для выполнения разных задач, включая подбор
                   мнемонических фраз.<br /><br />
-                </span>
-                Детальная работа бота:<br />
-                ┏ Скрипт подбирает рандомный ключ ECDSA.<br />
-                ┠ Хеширует SHA-256 на основе полученного на первом этапе кода.
-                Затем обрабатывают комбинацию с помощью функции RIPEMD-160. Это
-                нужно для получения основной части Bitcoin-адреса.<br />
-                ┠ Добавляют сетевой байт блока в виде префикса.<br />
-                ┠ Повторно хешируют на SHA-256.<br />
-                ┠ Преобразуют полученную строку в Base58.<br />
-                ┠ Сравнивают результат.<br />
-                ┠ Составляют мнемоническую фразу, если строки совпали.<br />
-                ┖ Финальный этап — кошелек у нас на балансе.
-              </h3>
-            </li>
-            <li class="howworks__item">
+                </h3>
+              </li>
+              <li data-aos-duration="2000" data-aos="fade-right" class="howworks__item1">
+                <p class="howworks__text1">Детальная работа бота:</p>
+                <div class="howworks__paragraph">
+                  <p class="howworks__subtext">
+                    ┏ Скрипт подбирает рандомный ключ ECDSA.<br />
+                    ┠ Хеширует SHA-256 на основе полученного на первом этапе
+                    кода. Затем обрабатывают комбинацию с помощью функции
+                    RIPEMD-160. Это нужно для получения основной части
+                    Bitcoin-адреса.<br />
+                    ┠ Добавляют сетевой байт блока в виде префикса.<br />
+                    ┠ Повторно хешируют на SHA-256.<br />
+                    ┠ Преобразуют полученную строку в Base58.<br />
+                    ┠ Сравнивают результат.<br />
+                    ┠ Составляют мнемоническую фразу, если строки совпали.<br />
+                    ┖ Финальный этап — кошелек у нас на балансе.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <li data-aos-duration="2000" data-aos="fade-left" class="howworks__item">
               <video
                 autoplay="autoplay"
                 loop="loop"
@@ -167,57 +182,81 @@
                 class="howworks__video"
               ></video>
             </li>
-          </ul>
+          </div>
         </div>
       </section>
+      
       <section class="reviews" id="reviews">
         <div class="container">
-          <h3 class="reviews__title">Топ Отзывы</h3>
+          <h3 data-aos-duration="1000" data-aos="fade-down" class="reviews__title">Топ Отзывы</h3>
+          <div class="reviews__wrapper">
           <div class="reviews__container">
-              <div class="reviews__item">
-                <h4>Сергей, 34</h4>
-                <p>
-                  Скептически относился к подобным сервисам, но решил
-                  попробовать. Бот действительно помог мне заработать, очень
-                  приятно что такие сервисы ещё существуют. Всё работает быстро,
-                  и, что самое важное, без обмана.
-                </p>
-              </div>
-              <div class="reviews__item">
-                <h4>Алина, 19</h4>
-                <p>
-                  Не ожидала, что сервис и вправду работает, но была впечатлёна
-                  скоростью работы тех. поддержки. Очень быстро пополнили и
-                  вывели!
-                </p>
-              </div>
-              <div class="reviews__item">
-                <h4>Артём, 23</h4>
-                <p>
-                  Сначала думал, что это очередной развод, но решил дать шанс
-                  этому боту. И не зря. Искал забытые кошельки несколько дней и
-                  вывел. Сервис надежный и быстрый. Определенно стоит внимания!
-                </p>
-              </div>
-            <div class="reviews__box-form">
+            <div class="reviews__item">
+              <h4>Сергей, 34</h4>
+              <p>
+                Скептически относился к подобным сервисам, но решил попробовать.
+                Бот действительно помог мне заработать, очень приятно что такие
+                сервисы ещё существуют. Всё работает быстро, и, что самое
+                важное, без обмана.
+              </p>
+              <h5 class="reviews__date">2 дня назад</h5>
+            </div>
+            <div class="reviews__item">
+              <h4>Алина, 19</h4>
+              <p>
+                Не ожидала, что сервис и вправду работает, но была впечатлёна
+                скоростью работы тех. поддержки. Очень быстро пополнили и
+                вывели!
+              </p>
+              <h5 class="reviews__date">2 дня назад</h5>
+            </div>
+            <div class="reviews__item">
+              <h4>Артём, 23</h4>
+              <p>
+                Сначала думал, что это очередной развод, но решил дать шанс
+                этому боту. И не зря. Искал забытые кошельки несколько дней и
+                вывел. Сервис надежный и быстрый. Определенно стоит внимания!
+              </p>
+              <h5 class="reviews__date">3 дня назад</h5>
+            </div>
+            <div data-aos-duration="2000" data-aos="fade-left" class="reviews__box-form">
               <form class="reviews__form">
                 <h3>Оставить Отзыв</h3>
                 <div class="webflow-style-input">
-                <input class="reviews__name reviews__input" type="text" placeholder="Имя" />
-              </div>
-                <input class="reviews__age reviews__input" type="text" placeholder="Возраст" />
-                <input class="reviews__text reviews__input" type="text" placeholder="Отзыв" />
+                  <input
+                    class="reviews__name reviews__input"
+                    type="text"
+                    placeholder="Имя"
+                    required
+                  />
+                </div>
+                <input
+                  class="reviews__age reviews__input"
+                  type="text"
+                  placeholder="Возраст"
+                  required
+                />
+                <input
+                  class="reviews__text reviews__input"
+                  type="text"
+                  placeholder="Отзыв"
+                  required
+                />
                 <button class="reviews__button">Отправить</button>
               </form>
+              <div class="success-message" id="successMessage">
+                Отзыв успешно отправлен!
+              </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
       <section class="whyus" id="why-us">
         <div class="container">
-          <h3>Почему вам следует выбрать именно нас?</h3>
+          <h3 data-aos-duration="1000" data-aos="fade-down" class="whyus__title">Почему вам следует выбрать именно нас?</h3>
           <ul class="whyus__list">
-            <li class="whyus__item">
+            <li data-aos-duration="1000" data-aos="fade-right" class="whyus__item">
               <svg class="whyus__svg">
                 <use href="./svg/symbol-defs.svg#icon-phone"></use>
               </svg>
@@ -227,7 +266,7 @@
                 Android, IOS, Windows или Mac
               </p>
             </li>
-            <li class="whyus__item">
+            <li data-aos-duration="1000" data-aos="fade-down" class="whyus__item">
               <svg class="whyus__svg">
                 <use href="./svg/symbol-defs.svg#icon-money"></use>
               </svg>
@@ -238,7 +277,7 @@
                 продуктивности и доходности
               </p>
             </li>
-            <li class="whyus__item">
+            <li data-aos-duration="1000" data-aos="fade-left" class="whyus__item">
               <svg class="whyus__svg">
                 <use href="./svg/symbol-defs.svg#icon-map"></use>
               </svg>
@@ -249,7 +288,7 @@
                 наших коллег
               </p>
             </li>
-            <li class="whyus__item">
+            <li data-aos-duration="1000" data-aos="fade-right" class="whyus__item">
               <svg class="whyus__svg">
                 <use href="./svg/symbol-defs.svg#icon-support"></use>
               </svg>
@@ -260,7 +299,7 @@
                 рассчитывать на оперативное решение любых вопросов.
               </p>
             </li>
-            <li class="whyus__item">
+            <li data-aos-duration="1500" data-aos="fade-down" class="whyus__item">
               <svg class="whyus__svg">
                 <use href="./svg/symbol-defs.svg#icon-interface"></use>
               </svg>
@@ -271,7 +310,7 @@
                 обладает техническими навыками.
               </p>
             </li>
-            <li class="whyus__item">
+            <li data-aos-duration="1000" data-aos="fade-left" class="whyus__item">
               <svg class="whyus__svg">
                 <use href="./svg/symbol-defs.svg#icon-security"></use>
               </svg>
@@ -288,17 +327,39 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer__box">
-          <a class="footer__link" href="#">Telegram канал</a>
-          <a class="footer__link" href="#">Отзывы</a>
-          <a class="footer__link" href="#">Политика Конфиденциальности</a>
-          <a class="footer__link" href="#">Контакты</a>
+        <div class="footer__content">
+          <div class="footer__box">
+            <a
+              target="_blank"
+              class="footer__link"
+              href="https://t.me/cryptosearching_official"
+              >Telegram канал</a
+            >
+            <a class="footer__link" href="#reviews">Отзывы</a>
+            <a class="footer__link" href="./privacy.html">Политика Конфиденциальности</a>
+            <a
+              target="_blank"
+              class="footer__link"
+              href="https://t.me/HelpServiceX"
+              >Контакты</a
+            >
+          </div>
+          <img
+            class="footer__img"
+            src="./img/cryptoseach.jpg"
+            alt="Crypto Search"
+          />
         </div>
-        <img src="#" alt="Crypto Search" />
-        <p>© Все права защищены.</p>
       </div>
     </footer>
+    <section class="prava">
+      <p>© Все права защищены. Garantex №12986153</p>
+    </section>
 
     <script src="./main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

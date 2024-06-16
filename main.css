@@ -10,19 +10,6 @@ html {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 320px) {
-    width: 320px;
-    overflow-x: hidden;
-  }
-  @media screen and (min-width: 410px) {
-    width: 410px;
-  }
-  @media screen and (min-width: 1290px) {
-    width: 1290px;
-    padding-left: 15px;
-    padding-right: 15px;
-    overflow-x: visible;
-  }
 }
 
 .header {
@@ -33,37 +20,78 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 100px;
 }
 
 .header__list {
   display: flex;
   flex-direction: row;
-  gap: 90px;
+  gap: 68px;
+  align-items: center;
+}
+
+.header__btn {
+  background: rgb(56, 106, 255);
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 5px 13px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin-top: 0;
+}
+
+.header__btn > a {
+  color: white;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: white;
+  font-size: 16px;
 }
 
 .header__title {
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 24px;
   color: black;
   transition: color 0.2s ease-in-out;
+  text-transform: uppercase;
+  color: rgb(56, 106, 255);
 }
 
 .header__link {
   font-family: "Geologica", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 16px;
   font-style: normal;
   font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
   color: black;
   transition: color 0.2s ease-in-out;
 }
 
-.header__title:hover {
-  color: rgb(137, 137, 255);
+.header__title > span {
+  color: rgb(92, 92, 92);
 }
+
 .header__link:hover {
   color: rgb(137, 137, 255);
 }
@@ -84,31 +112,35 @@ html {
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
-  font-size: 52px;
+  font-size: 72px;
   color: rgb(56, 106, 255);
   margin-bottom: 30px;
   letter-spacing: 3px;
   text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
 }
 
 .hero__title > span {
+  display: block;
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 63px;
   color: rgb(92, 92, 92);
   transition: color 0.2s ease-in-out;
   text-transform: uppercase;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .hero__descr {
   font-family: "Geologica", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+  font-weight: 600;
   font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
-  color: black;
-  font-size: 24px;
+  color: rgb(72, 72, 72);
+  font-size: 26px;
   transition: color 0.2s ease-in-out;
 }
 
@@ -146,7 +178,7 @@ html {
   font-style: normal;
   font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .questions {
@@ -158,9 +190,9 @@ html {
   text-align: center;
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
-  color: rgb(7, 9, 17);
+  color: rgb(31, 31, 31);
   text-transform: uppercase;
 }
 
@@ -189,6 +221,18 @@ html {
   padding-top: 12px;
   background-color: rgba(255, 255, 255, 0.772);
   border: solid 2px rgb(155, 157, 202);
+}
+
+.questions__item1 {
+  position: absolute;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 30px;
+  padding-top: 12px;
+  background-color: rgba(255, 255, 255, 0.772);
+  border: solid 2px rgb(155, 157, 202);
+  width: 950px;
+  height: 200px;
 }
 
 .questions__label::after {
@@ -228,7 +272,7 @@ html {
 
 .questions__icon {
   fill: #ffbc57;
-  width: 40px;
+  width: 25px;
   height: 40px;
 }
 
@@ -322,29 +366,73 @@ html {
   padding: 50px 0;
 }
 
+.howworks__item1 {
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 30px;
+  padding-top: 17px;
+  background-color: rgba(255, 255, 255, 0.772);
+  border: solid 2px rgb(155, 157, 202);
+  width: 790px;
+  height: 260px;
+}
+
+.howworks__subtext {
+  color: #2b2929;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: black;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .howworks__title {
   text-align: center;
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
-  color: rgb(7, 9, 17);
+  color: rgb(31, 31, 31);
   text-transform: uppercase;
   padding-bottom: 50px;
 }
 
 .howworks__list {
   display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.howworks__content {
+  display: flex;
   flex-direction: row;
 }
 
 .howworks__item {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .howworks__text {
+  color: #3c3c3c;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  font-size: 20px;
+  width: 850px;
+}
+
+.howworks__text > a {
+  color: #323279;
+}
+
+.howworks__text1 {
   color: #2b2929;
   font-family: "Geologica", sans-serif;
   font-optical-sizing: auto;
@@ -358,25 +446,29 @@ html {
 .howworks__span {
   font-size: 20px;
   font-weight: 800;
+  color: #434343;
 }
 
 .howworks__video {
-  height: 500px;
+  height: 430px;
   width: 300px;
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  margin-left: 150px;
 }
 
 .reviews {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 0;
 }
 
 .reviews__title {
   text-align: center;
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
-  color: rgb(7, 9, 17);
+  color: rgb(31, 31, 31);
   text-transform: uppercase;
   padding-bottom: 50px;
 }
@@ -399,13 +491,56 @@ html {
   overflow: hidden;
 }
 
+.inputForm {
+  border: 3px solid #b5b5ff;
+}
+
 .reviews__item {
   position: absolute;
-  top: 0;
+  top: 15%;
   left: 0;
-  max-width: 700px;
+  max-width: 750px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  border: 3px solid #b5b5ff;
+  border-radius: 20px;
+  padding: 20px;
+  max-height: 200px;
+}
+
+.reviews__item > h4 {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(7, 9, 17);
+  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.reviews__item > p {
+  color: #2b2929;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(85, 85, 85);
+  font-size: 23px;
+  padding-left: 5px;
+}
+
+.reviews__date {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  padding-left: 5px;
+  margin-top: 15px;
 }
 
 .reviews__item.active {
@@ -422,11 +557,21 @@ html {
 
 .reviews__form > h3 {
   text-align: center;
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(48, 48, 48);
+  text-transform: uppercase;
 }
 
 .reviews__box-form {
   position: absolute;
   right: 0;
+  border: 2px solid #b5b5ff;
+  padding: 15px;
+  border-radius: 30px;
+  padding-bottom: 25px;
 }
 
 .reviews__input {
@@ -467,4 +612,763 @@ html {
   word-break: break-word;
   border: 0;
   margin-top: 10px;
+}
+
+.success-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #6c6cff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(255, 255, 255);
+  font-size: 23px;
+}
+
+.whyus {
+  padding: 100px 0;
+}
+
+.whyus__title {
+  text-align: center;
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 26px;
+  color: rgb(31, 31, 31);
+  text-transform: uppercase;
+  padding-bottom: 50px;
+}
+
+.whyus__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 30px;
+}
+
+.whyus__item {
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  background-color: white;
+  border: 2px solid #b2b2ff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.whyus__svg {
+  fill: #5e5df0;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.whyus__text {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(21, 21, 21);
+  font-size: 18px;
+}
+
+.whyus__descr {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(21, 21, 21);
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.footer {
+  background-color: #313157a8;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__box {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__link {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+  color: #b5b5ff;
+}
+
+.footer__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  margin-top: 60px;
+}
+
+.prava {
+  background-color: #b5b5ff9f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.prava > p {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.privacy {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.privacy__text {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  color: rgb(60, 65, 93);
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+    overflow-x: hidden;
+  }
+
+  .header {
+    padding: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .header__nav {
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .header__btn {
+    padding: 5px;
+    width: 130px;
+    box-shadow: none;
+  }
+
+  .header__item:nth-child(1),
+  .header__item:nth-child(2),
+  .header__item:nth-child(3),
+  .header__item:nth-child(4),
+  .header__item:nth-child(5) {
+    display: none;
+  }
+
+  .hero {
+    padding: 0;
+    padding-top: 80px;
+  }
+
+  .hero__container {
+    width: 320px;
+  }
+
+  .hero__title {
+    font-size: 42px;
+  }
+
+  .hero__btn {
+    padding: 16px 34px;
+    box-shadow: none;
+  }
+
+  .hero__title > span {
+    font-size: 38px;
+    margin-right: 20px;
+  }
+
+  .hero__descr {
+    font-size: 22px;
+    width: 300px;
+  }
+
+  .questions {
+    padding-top: 100px;
+  }
+
+  .questions__title {
+    font-size: 22px;
+  }
+
+  .questions__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .questions__item {
+    width: 280px;
+  }
+
+  .questions__label::after {
+    right: 8px;
+  }
+
+  .questions__subtext {
+    margin-left: 25px;
+  }
+
+  .howworks__title {
+    font-size: 20px;
+  }
+
+  .howworks__item:nth-child(2) {
+    display: none;
+  }
+
+  .howworks__text {
+    width: 280px;
+    margin-left: 20px;
+  }
+
+  .howworks__item1 {
+    width: 280px;
+    height: 480px;
+    padding: 15px;
+    margin-left: 3px;
+  }
+
+  .reviews {
+    overflow: visible;
+    height: 950px;
+  }
+
+  .reviews__container {
+    height: 950px;
+  }
+
+  .reviews__box-form {
+    top: 550px;
+    left: 15px;
+    width: 260px;
+  }
+
+  .reviews__item {
+    top: 0px;
+    max-height: 800px;
+    width: 260px;
+    left: 9px;
+  }
+
+  .success-message {
+    right: 0;
+  }
+
+  .whyus {
+    padding-top: 130px;
+  }
+
+  .whyus__title {
+    font-size: 22px;
+  }
+
+  .whyus__item {
+    width: 230px;
+    height: 300px;
+  }
+
+  .whyus__item:nth-child(2),
+  .whyus__item:nth-child(3),
+  .whyus__item:nth-child(4),
+  .whyus__item:nth-child(5) {
+    height: 350px;
+  }
+
+  .whyus__item:nth-child(6) {
+    height: 330px;
+  }
+
+  .footer__box {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .prava {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  .container {
+    width: 410px;
+  }
+
+  .header__nav {
+    gap: 90px;
+  }
+
+  .header__btn {
+    width: 150px;
+    padding: 8px 28px;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero__title {
+    font-size: 55px;
+  }
+
+  .hero__title > span {
+    font-size: 48px;
+  }
+
+  .hero__descr {
+    font-size: 26px;
+    width: 360px;
+  }
+
+  .hero__btn {
+    padding: 22px 52px;
+  }
+
+  .questions__title {
+    font-size: 28px;
+  }
+
+  .questions__item {
+    width: 380px;
+  }
+
+  .questions__label::after {
+    top: 3px;
+  }
+
+  .questions__text {
+    max-width: 310px;
+  }
+
+  .howworks__title {
+    font-size: 28px;
+  }
+
+  .howworks__text {
+    width: 360px;
+  }
+
+  .howworks__item1 {
+    width: 360px;
+    margin-left: 9px;
+    height: 420px;
+  }
+
+  .reviews__box-form {
+    left: 50px;
+    width: 275px;
+  }
+
+  .reviews__item {
+    left: 50px;
+  }
+
+  .success-message {
+    right: 25px;
+  }
+
+  .whyus__title {
+    font-size: 28px;
+  }
+
+  .whyus__item {
+    width: 290px;
+    height: 270px;
+  }
+
+  .whyus__item:nth-child(2),
+  .whyus__item:nth-child(3),
+  .whyus__item:nth-child(4),
+  .whyus__item:nth-child(5) {
+    height: 300px;
+  }
+
+  .whyus__item:nth-child(6) {
+    height: 290px;
+  }
+  .footer {
+    padding-bottom: 100px;
+  }
+
+  .footer__link {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1290px) {
+  .container {
+    width: 1290px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__item:nth-child(1),
+  .header__item:nth-child(2),
+  .header__item:nth-child(3),
+  .header__item:nth-child(4),
+  .header__item:nth-child(5) {
+    display: block;
+  }
+
+  .header__nav {
+    gap: 70px;
+  }
+
+  .header__btn {
+    background: rgb(56, 106, 255);
+    border-radius: 999px;
+    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+      NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+      EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 5px 13px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-top: 0;
+    width: 170px;
+  }
+
+  .hero {
+    padding: 300px 0;
+  }
+
+  .hero__title {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 72px;
+    color: rgb(56, 106, 255);
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .hero__title > span {
+    display: block;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 63px;
+    color: rgb(92, 92, 92);
+    transition: color 0.2s ease-in-out;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .hero__descr {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+    color: rgb(72, 72, 72);
+    font-size: 26px;
+    transition: color 0.2s ease-in-out;
+    width: 1200px;
+  }
+
+  .hero__btn {
+    background: #5e5df0;
+    border-radius: 999px;
+    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+      NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+      EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 18px 56px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-top: 50px;
+  }
+
+  .questions {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .questions__title {
+    text-align: center;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 26px;
+    color: rgb(31, 31, 31);
+    text-transform: uppercase;
+  }
+
+  .questions__input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .questions__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .questions__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .questions__item {
+    border-radius: 10px;
+    padding: 5px;
+    padding-top: 12px;
+    background-color: rgba(255, 255, 255, 0.772);
+    border: solid 2px rgb(155, 157, 202);
+    width: 1100px;
+  }
+
+  .questions__label::after {
+    content: "";
+    background-image: url(./img/arrow-down.png);
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-color: transparent;
+    width: 34px;
+    height: 34px;
+  }
+
+  .questions__text {
+    max-width: 600px;
+  }
+
+  .howworks__item1 {
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    padding-top: 17px;
+    background-color: rgba(255, 255, 255, 0.772);
+    border: solid 2px rgb(155, 157, 202);
+    width: 790px;
+    height: 260px;
+  }
+
+  .howworks__subtext {
+    color: #2b2929;
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+    color: black;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .howworks__title {
+    text-align: center;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 26px;
+    color: rgb(31, 31, 31);
+    text-transform: uppercase;
+    padding-bottom: 50px;
+  }
+
+  .howworks__list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .howworks__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .howworks__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .howworks__text {
+    color: #3c3c3c;
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+    font-size: 20px;
+    width: 850px;
+  }
+
+  .howworks__item:nth-child(2) {
+    display: block;
+  }
+
+  .howworks__video {
+    margin-left: 100px;
+  }
+
+  .reviews {
+    height: 400px;
+    padding-bottom: 100px;
+  }
+
+  .reviews__title {
+    text-align: center;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 26px;
+    color: rgb(31, 31, 31);
+    text-transform: uppercase;
+    padding-bottom: 50px;
+  }
+
+  .reviews__item {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 750px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border: 3px solid #b5b5ff;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 200px;
+  }
+
+  .reviews__box-form {
+    position: absolute;
+    left: 950px;
+    border: 2px solid #b5b5ff;
+    padding: 15px;
+    border-radius: 30px;
+    padding-bottom: 25px;
+    top: 0;
+  }
+
+  .reviews__container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .whyus__title {
+    text-align: center;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 26px;
+    color: rgb(31, 31, 31);
+    text-transform: uppercase;
+    padding-bottom: 50px;
+  }
+  
+  .whyus__item {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #b2b2ff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  }
+
+  .footer__box {
+    flex-direction: row;
+    gap: 100px;
+  }
 }
